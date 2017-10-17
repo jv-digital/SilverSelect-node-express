@@ -1,0 +1,25 @@
+{
+  "name": "silverselect-node-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jv-digital/SilverSelect-node-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jv-digital/SilverSelect-node-express/issues"
+  },
+  "homepage": "https://github.com/jv-digital/SilverSelect-node-express#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "node-fetch": "^1.7.3",
+    "pug": "^2.0.0-rc.4"
+  }
+}
