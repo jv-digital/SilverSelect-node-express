@@ -1,8 +1,10 @@
 {
   "name": "silverselect-node-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Silver Select Overview:",
   "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
