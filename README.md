@@ -1,5 +1,9 @@
 # SilverSelect-node-express
 
+## Commands
+Start node server with:
+`npm run start`
+
 ## Silver Select Overview:
 
 ### The product:
