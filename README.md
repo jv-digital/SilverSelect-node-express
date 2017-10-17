@@ -1,8 +1,8 @@
 # SilverSelect-node-express
 
-##Silver Select Overview:
+## Silver Select Overview:
 
-###The product:
+### The product:
 Silver Select is a exclusive membership program for discerning travelers and diners of the older demographic. The product features similar offerings to its sister product, Meet Select. There are 3 types of memberships:
   *Full membership
   *Travel membership
@@ -15,7 +15,7 @@ The Full membership grants access to:
 
 The Travel and $5 trial only grant access to the travel benefits.
 
-###The API:
+### The API:
 These product offerings are supplied through the Meet Select API. All product categories have List and Detail endpoint, such as ‘hotels/:id’
 
 User signup and payments are also processed through the Meet Select API, although, Silver Select must have its own user session store to enable log-in / log-out and authenticated access.
@@ -26,7 +26,7 @@ Since the Priceline search results come from a proxied webpage, a special techni
 
 All users (logged in or logged out) will be able to see the features, such as hotel partner, dining, travel search (except prices), entertainment, lifestyle offers, but only logged in users with a membership will be able to actually perform an action, such as redeem the offer.
 
-###What has been accomplished:
+### What has been accomplished:
 
 The major initial step of the project was to define and research Meet Select’s capability to supply Silver Select with an API. At the start of scoping, Meet Select did not have an external API. Additionally, they had no way to modifying the Priceline search results page, nor an portable external form that could be used to redirect users to that page from their search.
 
@@ -57,22 +57,22 @@ A middleware server is necessary in order to provide caching for the data from M
 
 As the Meet Select API is external facing, it is appropriate to interact with the API directly from the front-end as well. Request body validation has been implemented on their end for endpoints that require it, such as sign-up/log-in and payments.
 
-###User sessions:
+### User sessions:
 A simple user store can be implemented easily with the Express Sessions middleware, or a PaaS of your choice, e.g. Firebase.
 
-###Rough Outline of Work:
+### Rough Outline of Work:
 
 Create HTML+CSS views and connect to API endpoints for product offerings
 Add user session and caching to server
 Connect modals to sign-up API
 Add specific elements to appear if logged in and have membership
 
-##Custom Modals on the Priceline Search Results Page
+## Custom Modals on the Priceline Search Results Page
 Meet Select implements a special reverse proxied search result page for the Priceline secret deals. Because all assets are served from Priceline, and they are minimized, and results appear via AJAX, it's hard to change the actual behavior of this page. However, there is a browser API that allows us to detect when AJAX elements have been loaded.
 
 The [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) allows us to bind an event handler that triggers on any mutation of an element, as well as its children. With this browser API, we are able to detect when AJAX elements are modified, and modify them post render.
 
 Xiaonin was able to implement the use of this browser method to perform custom changes to the Priceline results page, such as blurring of search results, and triggering custom modals. The current session state (logged in, not logged in) must be passed to the page via the search form, as the results page is on Meet Select's domain.
 
-##Modals
+## Modals
 HTML+CSS modals are provided (with some animation flair for presentation purposes) in the `/modals` folder. These modals can simply be bound to a form that submits to the Node server for middleware validation before interface with Meet Select's API.
