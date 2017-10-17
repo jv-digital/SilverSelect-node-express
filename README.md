@@ -4,14 +4,14 @@
 
 ### The product:
 Silver Select is a exclusive membership program for discerning travelers and diners of the older demographic. The product features similar offerings to its sister product, Meet Select. There are 3 types of memberships:
-  *Full membership
-  *Travel membership
-  *$5 promotional trial
+  * Full membership
+  * Travel membership
+  * $5 promotional trial
 
 The Full membership grants access to:
-  *Travel benefits, including secret hotel deals, transportation services, and lounge access
-  *VIP Dining perks at fine establishments across multiple cities
-  *Special deals on entertainment, lifestyle/shopping, and activities
+  * Travel benefits, including secret hotel deals, transportation services, and lounge access
+  * VIP Dining perks at fine establishments across multiple cities
+  * Special deals on entertainment, lifestyle/shopping, and activities
 
 The Travel and $5 trial only grant access to the travel benefits.
 
@@ -33,24 +33,24 @@ The major initial step of the project was to define and research Meet Select’s
 Over the past month, I have worked diligently with the Meet Select dev team to address spec requirements for the API and other access points required to enable Silver Select.
 
 The completed assets are listed below:
-  *Wireframes converted to high fidelity mock-ups by the designer, Karolina
-  *The Meet Select API (hosted by Meet Select, docs by Meet Select)
-  *The Meet Select Travel Search form
-  *Custom modals and effects on the Meet Select proxied Priceline search result page, though some styling may be required on their end. The HTML+CSS modals are complete and ready to be delivered for assistance.
-  *A Node-Express server with hookups to Meet Select API, and slug mapping for SEO purposes
-  *A tutorial for the solution to implementing the custom modals and effects on the proxied Priceline search results page.
-  *HTML+CSS assets for all signup steps for all memberships (6 slide-down modals)
+  * Wireframes converted to high fidelity mock-ups by the designer, Karolina
+  * The Meet Select API (hosted by Meet Select, docs by Meet Select)
+  * The Meet Select Travel Search form
+  * Custom modals and effects on the Meet Select proxied Priceline search result page, though some styling may be required on their end. The HTML+CSS modals are complete and ready to be delivered for assistance.
+  * A Node-Express server with hookups to Meet Select API, and slug mapping for SEO purposes
+  * A tutorial for the solution to implementing the custom modals and effects on the proxied Priceline search results page.
+  * HTML+CSS assets for all signup steps for all memberships (6 slide-down modals)
 
 What is remaining:
 
 Front-end assets:
-  *HTML+CSS must be written for the front-end views. In total there actually only 4 or 5 views:
-    *Homepage
-    *Product offer category template (they look the same for all categories, just different data is loaded)
-    *Product offer detail (they look the same for all offers, just different data is loaded)
-    *Travel form (the form is supplied by Meet Select, it may need to be styled)
-    *User account management page
-    *All views are supplied data from the API or middleware server.
+  * HTML+CSS must be written for the front-end views. In total there actually only 4 or 5 views:
+    * Homepage
+    * Product offer category template (they look the same for all categories, just different data is loaded)
+    * Product offer detail (they look the same for all offers, just different data is loaded)
+    * Travel form (the form is supplied by Meet Select, it may need to be styled)
+    * User account management page
+    * All views are supplied data from the API or middleware server.
 
 Front-end Hookups to API:
 A middleware server is necessary in order to provide caching for the data from Meet Select API, as well as handle user session. The Node-Express server currently provides the data pulling from Meet Select API, caching logic but no caching (can be done by integrating Redis), nor user session (can easily be done with Express Sessions). However, front-end routing is entirely up to whomever picks up the project. Currently, the Node-Express server performs server-side routing, although a single page app is entirely appropriate as well if that is the direction taken.
