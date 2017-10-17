@@ -74,5 +74,7 @@ The [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/Mutatio
 
 Xiaonin was able to implement the use of this browser method to perform custom changes to the Priceline results page, such as blurring of search results, and triggering custom modals. The current session state (logged in, not logged in) must be passed to the page via the search form, as the results page is on Meet Select's domain.
 
+As we do not have access to Meet Select code (and I am unsure if they'd be comfortable with us mussing around with their core product's code), all requests to changes in logic and behavior are delegated through Janney.
+
 ## Modals
 HTML+CSS modals are provided (with some animation flair for presentation purposes) in the `/modals` folder. These modals can simply be bound to a form that submits to the Node server for middleware validation before interface with Meet Select's API.
