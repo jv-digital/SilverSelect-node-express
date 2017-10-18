@@ -1,8 +1,30 @@
 # SilverSelect-node-express
 
-## Commands
+## Instructions
 Start node server with:
 `npm run start`
+
+Server runs on port 8080 as default, but can be changed with process.env.PORT
+
+Current routes available:
+```
+GET /travel/hotels
+GET /travel/hotels/[slug|id]
+GET /travel/transportation
+GET /travel/transportation/[slug|id]
+GET /dining
+GET /dining/[slug|id]
+GET /activities
+GET /activities/[slug|id]
+GET /nightlife
+GET /nightlife/[slug|id]
+```
+
+Meet Select API only accepts id for details endpoints but simple logic for URL slugs has been included. Caching slugs can be done with Redis or other in-memory store. Currently done in a simple `class`
+```
+http://localhost:8080/dining/928761
+http://localhost:8080/dining/pennsylvania-6
+```
 
 ## Silver Select Overview:
 
